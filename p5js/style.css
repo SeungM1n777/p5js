@@ -1,0 +1,99 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg1: #1b1f3b;
+  --bg2: #2d325e;
+  --card: #ffffff;
+  --ink: #1d2030;
+  --muted: #7b8198;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 20px;
+  font-family: "Pretendard", "Segoe UI", system-ui, sans-serif;
+  color: #fff;
+  background: radial-gradient(1200px 600px at 50% -10%, var(--bg2), var(--bg1));
+}
+
+.hero { text-align: center; margin-bottom: 36px; }
+
+.eyebrow {
+  font-size: .72rem; letter-spacing: .28em; color: #9aa3ff;
+  font-weight: 600; margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 2rem; font-weight: 800; letter-spacing: -.01em;
+  background: linear-gradient(90deg, #fff, #b9c0ff);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+.lead { margin-top: 10px; color: #c3c8e6; font-size: .95rem; }
+
+#projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  width: 100%;
+  max-width: 680px;
+}
+
+.cell {
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .35);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.cell:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, .5);
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  background: #f5f5f5;
+}
+
+.stage iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 600px; height: 400px;
+  border: none;
+  transform-origin: top left;
+  transform: scale(.5);
+}
+
+.caption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  color: var(--ink);
+}
+
+.caption .num { font-weight: 800; color: var(--muted); font-size: .9rem; }
+.caption .title { font-weight: 600; font-size: .95rem; }
+
+.badge {
+  margin-left: auto;
+  font-size: .72rem; font-weight: 700;
+  padding: 3px 10px; border-radius: 999px;
+}
+
+.badge.static { background: #e8edff; color: #3a49c9; }
+.badge.motion { background: #ffe9e3; color: #d6502f; }
+
+.foot { margin-top: 36px; color: #8b91b5; font-size: .8rem; }
+
+@media (max-width: 560px) {
+  #projects { gap: 14px; }
+  .stage iframe { transform: scale(.42); }
+}
