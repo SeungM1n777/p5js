@@ -3,80 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>p5.js 작품 모음</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      padding: 24px;
-      background: #f5f5f5;
-    }
-
-    h1 {
-      margin-bottom: 20px;
-      font-size: 1.6rem;
-    }
-
-    #projects {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      width: 100%;
-      max-width: 600px;
-      gap: 12px;
-    }
-
-    #projects .cell {
-      aspect-ratio: 16 / 9;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-
-    #projects .cell iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 600px;
-      height: 400px;
-      border: none;
-      transform-origin: top left;
-      transform: scale(0.5);
-    }
- 
-  </style>
+  <title>나의 p5.js 작품 모음</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <h1>나의 p5.js 작품</h1>
+  <header class="hero">
+    <p class="eyebrow">CREATIVE CODING · p5.js</p>
+    <h1>나의 p5.js 작품 모음</h1>
+    <p class="lead">정적 드로잉과 움직이는 애니메이션을 한 화면에서 만나보세요.</p>
+  </header>
 
   <main id="projects">
 
-    <div class="cell">
-      <iframe src="과제1/index.html"></iframe>
-    </div>
+    <article class="cell">
+      <div class="stage"><iframe src="과제1/index.html" loading="lazy" scrolling="no"></iframe></div>
+      <div class="caption">
+        <span class="num">01</span>
+        <span class="title">정적 드로잉</span>
+        <span class="badge static">정적</span>
+      </div>
+    </article>
 
-    <div class="cell">
-      <iframe src="과제4/index.html"></iframe>
-    </div>
+    <article class="cell">
+      <div class="stage"><iframe src="과제4/index.html" loading="lazy" scrolling="no"></iframe></div>
+      <div class="caption">
+        <span class="num">04</span>
+        <span class="title">애니메이션</span>
+        <span class="badge motion">동적</span>
+      </div>
+    </article>
 
-    <div class="cell">
-      <iframe src="과제2/index.html"></iframe>
-    </div>
+    <article class="cell">
+      <div class="stage"><iframe src="과제2/index.html" loading="lazy" scrolling="no"></iframe></div>
+      <div class="caption">
+        <span class="num">02</span>
+        <span class="title">정적 드로잉</span>
+        <span class="badge static">정적</span>
+      </div>
+    </article>
 
-    <div class="cell">
-      <iframe src="과제3/index.html"></iframe>
-    </div>
+    <article class="cell">
+      <div class="stage"><iframe src="과제3/index.html" loading="lazy" scrolling="no"></iframe></div>
+      <div class="caption">
+        <span class="num">03</span>
+        <span class="title">인터랙티브</span>
+        <span class="badge motion">동적</span>
+      </div>
+    </article>
 
   </main>
+
+  <footer class="foot">© 2026 · p5.js Visual Portfolio</footer>
 
 </body>
 </html>
